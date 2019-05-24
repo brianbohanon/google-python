@@ -23,7 +23,7 @@ def verbing(s):
       v = s + 'ly'
       return v
   else:
-      return s 
+      return s
 
 
 # E. not_bad
@@ -54,7 +54,21 @@ def not_bad(s):
 #  a-front + b-front + a-back + b-back
 def front_back(a, b):
   # +++your code here+++
-  return
+  a_middle = len(a) / 2
+  b_middle = len(b) / 2
+
+  if len(a) % 2 == 1:
+      a_middle = a_middle + 1
+
+  if len(b) % 2 == 1:
+      b_middle = b_middle + 1
+
+  a_front = a[:a_middle]
+  a_back = a[a_middle:]
+  b_front = b[:b_middle]
+  b_back = b[b_middle:]
+
+  return a_front + b_front + a_back + b_back
 
 
 # Simple provided test() function used in main() to print
